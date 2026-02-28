@@ -45,7 +45,7 @@ public class Algoritmo
                 }
             }
             
-            // Si no hubo intercambios, terminamos temprano
+            // Si no hubo intercambios,  terminamos temprano porque el arreglo ya está ordenado
             if (!intercambio)
                 break;
         }
