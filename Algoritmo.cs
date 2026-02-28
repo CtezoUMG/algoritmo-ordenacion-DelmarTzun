@@ -26,5 +26,30 @@ public class Algoritmo
     {
         // TODO: Implementar el algoritmo de Bubble Sort tradicional
 
+        int n = arr.Length;
+        for (int i = 0; i < n - 1; i++)
+        {
+            // Bandera si no hay intercambios, el arreglo ya está ordenado
+            bool intercambio = false;
+            
+            // El último i elementos ya esta en su lugar
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    // Intercambio (swap)
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    intercambio = true;
+                }
+            }
+            
+            // Si no hubo intercambios, terminamos temprano
+            if (!intercambio)
+                break;
+        }
+
+
     }
 }
